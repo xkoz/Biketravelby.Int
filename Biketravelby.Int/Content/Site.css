@@ -1,12 +1,34 @@
-﻿body {
+﻿html {
+    height: 100%;
+}
+
+body {
     padding-top: 50px;
-    padding-bottom: 20px;
+    background: url("Images/background.jpg");
+    height: 100%;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    background-color: #ffffff;
+    height: 100%;
+}
+
+.render {
+    margin-bottom: -50px;
+    min-height: 100%;
+}
+
+.footer {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.footer > p {
+    margin: 0;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
