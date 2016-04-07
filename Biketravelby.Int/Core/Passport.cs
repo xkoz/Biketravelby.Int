@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
 
-namespace Biketravelby.Int.Models.ClientModels
+namespace Biketravelby.Int.Core
 {
     public class Passport
     {
@@ -33,5 +34,15 @@ namespace Biketravelby.Int.Models.ClientModels
     {
         National = 0,
         Schengen = 1
+    }
+
+    public class PassportDbContext : DbContext
+    {
+        public DbSet<Passport> Passpors { get; set; }
+    }
+
+    public class VisaDbContext : DbContext
+    {
+        public DbSet<Visa> Visas { get; set; }
     }
 }

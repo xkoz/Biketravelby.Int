@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
 
-namespace Biketravelby.Int.Models.ClientModels
+namespace Biketravelby.Int.Core
 {
     public class Address
     {
@@ -20,5 +21,10 @@ namespace Biketravelby.Int.Models.ClientModels
         public string House { get; set; }
 
         public string Flat { get; set; }
+    }
+
+    public class AddressDbContext : DbContext
+    {
+        public DbSet<Address> Addresses { get; set; }
     }
 }
