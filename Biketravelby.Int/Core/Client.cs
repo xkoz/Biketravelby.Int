@@ -33,5 +33,7 @@ namespace Biketravelby.Int.Core
     public class ClientDBContext : DbContext
     {
         public DbSet<Client> Clients { get; set; }
+
+        public System.Data.Entity.DbSet<Biketravelby.Int.Models.ClientsModel> ClientsModels { get; set; }
     }
 }
