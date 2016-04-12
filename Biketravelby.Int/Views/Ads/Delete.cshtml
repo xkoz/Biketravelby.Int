@@ -1,0 +1,75 @@
+﻿@model Biketravelby.Int.Core.Ads
+
+@{
+    ViewBag.Title = "Удалить рекламную компанию";
+}
+
+<h2>Удалить рекламную компанию</h2>
+
+<h3>Вы действительно хотите удалить эту рекламную компанию?</h3>
+<div>
+
+    <table class="table table-bordered">
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Title)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => model.Title)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Start)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => model.Start)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Finish)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => model.Finish)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Price)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => model.Price)
+            </td>
+
+        </tr>
+
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Comment)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => model.Comment)
+            </td>
+        </tr>
+
+    </table>
+  
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn btn-danger" /> |
+            @Html.ActionLink("Вернуться к списку", "Index")
+        </div>
+    }
+</div>
