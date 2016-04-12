@@ -1,58 +1,71 @@
 ﻿@model Biketravelby.Int.Core.Ads
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Детали рекламной компании";
 }
 
-<h2>Details</h2>
+<h2>Детали рекламной компании</h2>
 
 <div>
-    <h4>Ads</h4>
-	<hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
+    <table class="table table-bordered table-ads">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Start)
-        </dt>
+            <td>
+                @Html.DisplayFor(model => model.Title)
+            </td>
+        </tr>
 
-        <dd>
-            @Html.DisplayFor(model => model.Start)
-        </dd>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Start)
+            </th>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Finish)
-        </dt>
+            <td>
+                @Html.DisplayFor(model => model.Start)
+            </td>
+        </tr>
 
-        <dd>
-            @Html.DisplayFor(model => model.Finish)
-        </dd>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Finish)
+            </th>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
+            <td>
+                @Html.DisplayFor(model => model.Finish)
+            </td>
+        </tr>
 
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Comment)
-        </dt>
+            <td>
+                @Html.DisplayFor(model => model.Price)
+            </td>
 
-        <dd>
-            @Html.DisplayFor(model => model.Comment)
-        </dd>
+        </tr>
 
-    </dl>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Comment)
+            </th>
+
+            <td>
+                @Html.DisplayFor(model => model.Comment)
+            </td>
+        </tr>
+
+    </table>
 </div>
-<p>
-    @Html.ActionLink("Редактировать", "Edit", new { id = Model.AdsID }) |
-    @Html.ActionLink("Вернуться к списку", "Index")
-</p>
+
+<div class="form-ads">
+    <p>
+        @Html.ActionLink("Редактировать", "Edit", new { id = Model.AdsID }, new { @class = "btn btn-success" })
+        @Html.ActionLink("Вернуться к списку", "Index", new { area = "" }, new { @class = "btn btn-default" })
+    </p>
+</div>

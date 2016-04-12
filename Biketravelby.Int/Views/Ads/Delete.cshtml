@@ -1,7 +1,7 @@
 ﻿@model Biketravelby.Int.Core.Ads
 
 @{
-    ViewBag.Title = "Удалить рекламную компанию";
+    ViewBag.Title = "Удаление рекламной компании";
 }
 
 <h2>Удалить рекламную компанию</h2>
@@ -9,11 +9,11 @@
 <h3>Вы действительно хотите удалить эту рекламную компанию?</h3>
 <div>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-ads">
         <tr>
-            <td>
+            <th>
                 @Html.DisplayNameFor(model => model.Title)
-            </td>
+            </th>
 
             <td>
                 @Html.DisplayFor(model => model.Title)
@@ -21,9 +21,9 @@
         </tr>
 
         <tr>
-            <td>
+            <th>
                 @Html.DisplayNameFor(model => model.Start)
-            </td>
+            </th>
 
             <td>
                 @Html.DisplayFor(model => model.Start)
@@ -31,9 +31,9 @@
         </tr>
 
         <tr>
-            <td>
+            <th>
                 @Html.DisplayNameFor(model => model.Finish)
-            </td>
+            </th>
 
             <td>
                 @Html.DisplayFor(model => model.Finish)
@@ -41,9 +41,9 @@
         </tr>
 
         <tr>
-            <td>
+            <th>
                 @Html.DisplayNameFor(model => model.Price)
-            </td>
+            </th>
 
             <td>
                 @Html.DisplayFor(model => model.Price)
@@ -52,9 +52,9 @@
         </tr>
 
         <tr>
-            <td>
+            <th>
                 @Html.DisplayNameFor(model => model.Comment)
-            </td>
+            </th>
 
             <td>
                 @Html.DisplayFor(model => model.Comment)
@@ -67,9 +67,10 @@
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Удалить" class="btn btn-danger" /> |
-            @Html.ActionLink("Вернуться к списку", "Index")
+        <div class="form-actions no-color form-ads">
+            <input type="submit" value="Удалить" class="btn btn-danger" />
+            @Html.ActionLink("Отмена", "Index", new { area = "" }, new { @class = "btn btn-default" })
         </div>
     }
+    
 </div>
